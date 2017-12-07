@@ -1,4 +1,5 @@
 class Card{
+
 	private int value;
 	private String name;
 	public Card(){}
