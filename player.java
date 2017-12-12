@@ -1,4 +1,3 @@
-import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
 class player{
@@ -14,7 +13,6 @@ class player{
 	public List<Card> getHand(){
 		return hand;
 	}
-	public player(){}
 	public player(double money){
 		this.hand = new ArrayList<Card>();
 		currentBal = money;
