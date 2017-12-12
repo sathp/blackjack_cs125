@@ -15,10 +15,14 @@ class Table{
      * Class variable that holds the number of players standing.
      * When all the players are standing, the dealer's cards are displayed.
      */
-    private int playersStanding; // How many players are 'stand'ing. When all the players are standing, the dealer's cards are displayed.
+    private int playersStanding;
 
     /* Class variable that holds the minimum bet amount required to play a game. */
-    private double minBet
+    private double minBet;
+
+    /* Class that holds the dealer. */
+    private Dealer dealer;
+
     /*
      * Creates a new table with the given parameters.
      * Only for starting a game from fresh.
@@ -44,6 +48,19 @@ class Table{
 
         // Keeps of track of the number of players standing. Updates every turn.
         int playersStanding = 0;
+
+        // Deals players cards round wise. Repeats for loops to remain authentic.
+        // Card 1
+        deal(dealer);
+        for (i = 0; i < players.length - 1; i++) {
+            deal(players[i]);
+        }
+        // Card 2
+        deal(dealer);
+        for (i = 0; i < players.length - 1; i++) {
+            deal(players[i]);
+        }
+
     }
 
     /*
@@ -57,14 +74,22 @@ class Table{
         }
     }
 
+    /* Used to create a new deck of card while initialising a table and while restarting each game. */
     public void newDeck() {
         this.decks = new Deck[4];
         for (i = 0; i < decks.length; i++) {
-            this.decks[i] = new Deck;
+            this.decks[i] = new Deck();
         }
     }
 
-    public void deal() {
-        
+    /* Deals a player object a card from the top of a random deck. */
+    public void deal(final Player player) {
+        deckNumber = (int) Math.random()*3;
+        card = decks[deckNumber].getCard();
+        player.addCard(card);
+    }
+
+    public checkHand() {
+
     }
 }
