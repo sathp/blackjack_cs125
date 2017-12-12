@@ -21,19 +21,19 @@ class Deck{
 		deck = new ArrayList<Card>();
 		//create 4 different suits and append them to the list 
 		for (int i = 2; i < 15; i++){
-			Card temp = new Card(2, "Clubs");
+			Card temp = new Card(i, "Clubs");
 			deck.add(temp);
 		}
 		for (int i = 2; i < 15; i++){
-			Card temp = new Card(2, "Spades");
+			Card temp = new Card(i, "Spades");
 			deck.add(temp);
 		}
 		for (int i = 2; i < 15; i++){
-			Card temp = new Card(2, "Diamonds");
+			Card temp = new Card(i, "Diamonds");
 			deck.add(temp);
 		}
 		for (int i = 2; i < 15; i++){
-			Card temp = new Card(2, "Hearts");
+			Card temp = new Card(i, "Hearts");
 			deck.add(temp);
 		}
 		//call the randomizer for the list

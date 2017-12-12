@@ -3,6 +3,7 @@ package src;
 class Card{
 	private int value;
 	private String name = new String();
+	private String suit;
 	private boolean inDeck = true;
 	public boolean isOut() {
 		return inDeck;
@@ -13,7 +14,7 @@ class Card{
 	public String getName() {
 		return name;
 	}
-	public void setName(String suit, int value1) {
+	public void setName(int value1) {
 		if (value1 == 12) {
 			name = "Queen of " + suit;
 		}
@@ -27,7 +28,8 @@ class Card{
 			name = "Ace of " + suit;
 		}
 	}
-    Card(int value1, String suit){
+    Card(int value1, String suit1){
+    	suit = new String(suit1);
     	if (value1>10) {
     		if (value1 == 14) {
     			value = 11;
@@ -39,7 +41,7 @@ class Card{
     	} else {
     		this.value = value1;
     	}
-    	this.setName(suit, value1);
+    	this.setName(value1);
     }
     public int getVal(){
         return value;

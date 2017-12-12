@@ -56,8 +56,7 @@ class Table{
 	        // Card 1
 	        deal(dealer);
 	        for (int i = 0; i < players.length - 1; i++) {
-	            deal(players[i]);
-	            
+	            deal(players[i]);   
 	        }
 	        // Card 2
 	        deal(dealer);
@@ -94,6 +93,7 @@ class Table{
             int i = sc.nextInt();
             if(i == 1) {
             		player.addCard(card);
+            		System.out.println("You were dealt: " + card.getName());
             } else if (i == 2) {
             		player.togglePlayingGame();
             		playersStanding++;
