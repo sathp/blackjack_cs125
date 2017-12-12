@@ -1,18 +1,18 @@
-import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
-import card.java;
 class player{
 	private int handValue;
 	private List<Card> hand;
 	private double currentBal;
+	public double getBal() {
+		return currentBal;
+	}
 	public int getHandVal(){
 		return handValue;
 	}
-	public Card[] getHand(){
+	public List<Card> getHand(){
 		return hand;
 	}
-	public player(){}
 	public player(double money){
 		this.hand = new ArrayList<Card>();
 		currentBal = money;
