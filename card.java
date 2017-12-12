@@ -2,6 +2,7 @@ class Card{
 	private int value;
 	private String name = new String();
 	private boolean inDeck = true;
+<<<<<<< HEAD
 	public boolean isOut() {
 		return inDeck;
 	}
@@ -11,6 +12,14 @@ class Card{
 	public String getName() {
 		return name;
 	}
+=======
+	public void change() {
+		inDeck = false;
+	}
+	public String getName() {
+		return name;
+	}
+>>>>>>> ade34703d4fb6cee2642310a98d1fe80aa0e9d0c
 	public void setName(String suit, int value1) {
 		if (value1 == 12) {
 			name = "Queen of " + suit;
