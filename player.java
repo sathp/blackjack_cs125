@@ -1,6 +1,6 @@
 import java.util.List;
 import java.util.ArrayList;
-class player{
+class Player{
 	private int handValue;
 	private List<Card> hand;
 	private double currentBal;
@@ -13,7 +13,7 @@ class player{
 	public List<Card> getHand(){
 		return hand;
 	}
-	public player(double money){
+	public Player(double money){
 		this.hand = new ArrayList<Card>();
 		currentBal = money;
 	}

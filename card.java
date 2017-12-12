@@ -2,6 +2,9 @@ class Card{
 	private int value;
 	private String name = new String();
 	private boolean inDeck = true;
+	public boolean isOut() {
+		return inDeck;
+	}
 	public void change() {
 		inDeck = false;
 	}
