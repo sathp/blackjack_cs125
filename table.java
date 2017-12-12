@@ -4,6 +4,17 @@ import java.util.ArrayList;
 import player.java;
 import deck.java;
 
+/*
+ * A class that emulates a Blackjack Table.
+ * Contains:
+ * - Multiple Decks of Shuffled Cards (decks, newDeck())
+ * - Players (players)
+ * - A Dealer that also plays the game (dealer)
+ * The class contains methods than can:
+ * - Deal Cards (deal();)
+ * - Check if the game has been won (checkHand();)
+ * - Determine the winner (getWinner();)
+ */
 class Table{
 
     /* Class variable that holds multiple number of decks of cards. */
@@ -96,6 +107,11 @@ class Table{
             }
         }
         return false;
+    }
+
+    /* Method that allows player to stand. */
+    public void stand() {
+
     }
 
     /*
