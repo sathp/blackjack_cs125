@@ -1,6 +1,6 @@
-import java.util.List;
-import java.util.ArrayList;
+package src;
 
+import java.util.ArrayList;
 /*
  * Class that emulates a player.
  * Each player has:
@@ -19,23 +19,27 @@ class Player{
 	private int ID;
 
 	/* A class variable (List of Card objects) that holds a list of cards dealt to the player / hand. */
-	private List<Card> hand;
+	private ArrayList<Card> hand;
 
 	/* A class variable (integer) that holds the value of the player's hand (or cards). */
 	private int handValue;
 
 	/* A class variable (boolean) that keeps track of whether a player is still in the game. */
 	private boolean playingGame;
+	public int getID() {
+		return ID;
+	}
 
 	public int getHandVal(){
 		return handValue;
 	}
-	public List<Card> getHand(){
+	public ArrayList<Card> getHand(){
 		return hand;
 	}
-	public Player(){
+	public Player(int a){
 		this.hand = new ArrayList<Card>();
 		this.playingGame = true;
+		ID = a;
 	}
 	public void addCard(Card deal){
 		hand.add(deal);

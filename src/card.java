@@ -1,3 +1,5 @@
+package src;
+
 class Card{
 	private int value;
 	private String name = new String();

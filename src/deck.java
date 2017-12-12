@@ -1,6 +1,7 @@
+package src;
+
 import java.util.ArrayList;
 import java.util.Collections;
-import card.java;
 /**
  * 
  * @author satwik
@@ -42,15 +43,15 @@ class Deck{
 	 * shuffle method for randomizing the card objects in the arraylist 
 	 */
 	private void shuffle() {
-		for(int i = 0; i < 53; i++) {
-			int shuffleNumber = (int) Math.random()*(52); //very sophisticated method for generation of random numbers
+		for(int i = 0; i < 52; i++) {
+			int shuffleNumber = (int) Math.random()*(51); //very sophisticated method for generation of random numbers
 			Collections.swap(deck, i, shuffleNumber); //very sophisticated method for swapping two objects in our arraylist
 		}
 	}
 
 	public Card getCard() {
-		card = deck.get(cardsUsed);
+		Card card1 = deck.get(cardsUsed);
 		cardsUsed++;
-		return card;
+		return card1;
 	}
 }
