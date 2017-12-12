@@ -1,7 +1,7 @@
-import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 class Deck{
-	private List<Card> deck;
+	private ArrayList<Card> deck;
 	public Deck(){
 		deck = new ArrayList<Card>();
 		for (int i = 2; i < 15; i++){
@@ -22,6 +22,9 @@ class Deck{
 		}
 	}
 	public void shuffle() {
-		for(int i = 0; i <)
+		for(int i = 0; i < 53; i++) {
+			int shuffleNumber = (int) Math.random()*(52);
+			Collections.swap(deck, i, shuffleNumber);
+		}
 	}
 }
